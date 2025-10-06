@@ -1,3 +1,7 @@
-#divNav{
+#divNav,#divNuevo{
     display: none;
+}
+
+#crearUniverso{
+    display: block;
 }

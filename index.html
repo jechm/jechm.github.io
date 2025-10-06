@@ -13,9 +13,12 @@
     <div id="crearUniverso">
         <h2>PARA INICIAR AGREGA LOS ELEMENTOS DEL CONJUNTO UNIVERSO</h2>
         <label for="txtNuevoElementoUniverso">ESCRIBE EL ELEMENTO A AGREGAR</label>
+        <br>
         <input type="text" name="txtElementoUniverso" id="txtNuevoElementoUniverso">
+        <br>
         <button type="button" onclick="añadirElemento('U')">Agregar</button>
-        <button type="button" onclick="terminarUniverso()">Finalizar</button>
+        <br>
+        <button type="button" onclick="cambioVentana('crearUniverso', 'divNav')">Finalizar</button>
 
     </div>
 
@@ -26,7 +29,7 @@
     <input type="text" id="nombreNuevoConjunto">
     <button type="button">CREAR NOMBRE</button>
     <label >{}</label>
-    <button id="finCrear" onclick="#finalizaCreacion()">Finalizar</button>
+    <button id="finCrear" onclick="finalizaCreacion(divNuevo)">Finalizar</button>
 </div>
 </body>
 </html>
