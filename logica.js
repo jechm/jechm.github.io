@@ -1,7 +1,6 @@
-var conjuntos=[];
-var nombreConjuntos=[];
-function crearconjunto(elemento,conjunto){
-  
+let nombreConjuntos=["u","v"]
+let conjuntos=[]
+
+function crearConjuntos(){
+    
 }
-  
-  

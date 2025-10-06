@@ -1,25 +1,32 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>PROYECTO: CALCULADORA DE CONJUNTOS</title>
+    <script src="logica.js"></script>
+    <link rel="stylesheet" href="estilos.css">
 </head>
 <body>
-    <h1>CALCULADORA <span id="de" onclick="mostrarvalor(this)">DE</span> CONJUNTOS</h1>
-    <h2 onclick="mostrarvalor(this)">titulo h2</h2>
-  <div class="div_men_principal"></div>
-  <div class="div_creacion"></div>
-  <div class="div_ver_conjuntos"></div>
-  <div class="div_modificacion"></div>
-  <div class="div_operaciones"></div>
-  <div class="div_salir"><button type="button">SALIR</button></div>
+    <h1>CALCULADORA DE CONJUNTOS</h1>
+    
+    <div id="crearUniverso">
+        <h2>PARA INICIAR AGREGA LOS ELEMENTOS DEL CONJUNTO UNIVERSO</h2>
+        <label for="txtNuevoElementoUniverso">ESCRIBE EL ELEMENTO A AGREGAR</label>
+        <input type="text" name="txtElementoUniverso" id="txtNuevoElementoUniverso">
+        <button type="button" onclick="añadirElemento('U')">Agregar</button>
+        <button type="button" onclick="terminarUniverso()">Finalizar</button>
 
-    <script>
-        function mostrarvalor(origen){
-            a = origen.value;
-            alert(a);
-        }
-    </script>
+    </div>
+
+    <div id="divNav"><button type="button" onclick="crearConjuntos()">hacer clic</button></div>
+       
+    <div id="divNuevo"> 
+    <label>INGRESA NOMBRE DEL NUEVO CONJUNTO</label>
+    <input type="text" id="nombreNuevoConjunto">
+    <button type="button">CREAR NOMBRE</button>
+    <label >{}</label>
+    <button id="finCrear" onclick="#finalizaCreacion()">Finalizar</button>
+</div>
 </body>
 </html>
