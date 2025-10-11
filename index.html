@@ -1,35 +1,53 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>PROYECTO: CALCULADORA DE CONJUNTOS</title>
-    <script src="logica.js"></script>
-    <link rel="stylesheet" href="estilos.css">
 </head>
+
 <body>
-    <h1>CALCULADORA DE CONJUNTOS</h1>
-    
-    <div id="crearUniverso">
-        <h2>PARA INICIAR AGREGA LOS ELEMENTOS DEL CONJUNTO UNIVERSO</h2>
-        <label for="txtNuevoElementoUniverso">ESCRIBE EL ELEMENTO A AGREGAR</label>
-        <br>
-        <input type="text" name="txtElementoUniverso" id="txtNuevoElementoUniverso">
-        <br>
-        <button type="button" onclick="añadirElemento('U')">Agregar</button>
-        <br>
-        <button type="button" onclick="cambioVentana('crearUniverso', 'divNav')">Finalizar</button>
+    <div>
+        <h1>CALCULADORA DE CONJUNTOS</h1>
+    </div>
+    <div class="div_Crear_Universo" id="divUniverso">
+        <label for="txtNuevoElementoU">Ingrese un nuevo elemento</label><br>
+        <input type="text" placeholder="NUEVO ELEMENTO AQUI" id="txtNuevoElementoU"><br>
+        <button type="button" id="btnCrearU" onclick="añadirElementos('U', 'txtNuevoElementoU')">AGREGAR</button><br>
+        <label id="conjuntoUcr"></label><br>
+        <button type="button" id="btnTerminarConjuntoU" onclick="cambiarDiv('divUniverso','div_creacion')">TERMINAR</button>
+    </div>
+    <div class="div_men_principal" style="display: none;">
+        <nav>
+            <button type="button">CREAR CONJUNTOS</button>
+            <button type="button" onclick="cambiarDiv('div_creacion','div_modificacion')">MODIFICAR CONJUNTOS</button>
+        </nav>
 
     </div>
+    <div class="div_creacion" style="display: none;">
+        <select id=""></select>
+    </div>
+    <div class="div_ver_conjuntos" style="display: none;"></div>
+    <div class="div_modificacion" style="display: none;">
+        <div id="div_añadirElemento"> 
+            <select id="select_nombreConjunto">
 
-    <div id="divNav"><button type="button" onclick="crearConjuntos()">hacer clic</button></div>
-       
-    <div id="divNuevo"> 
-    <label>INGRESA NOMBRE DEL NUEVO CONJUNTO</label>
-    <input type="text" id="nombreNuevoConjunto">
-    <button type="button">CREAR NOMBRE</button>
-    <label >{}</label>
-    <button id="finCrear" onclick="finalizaCreacion(divNuevo)">Finalizar</button>
-</div>
+            </select>
+        </div>
+        <div id="div_elimminarElementop" style="display: none;">
+            <select name="select_conjuntos" id="selectConjuntos">
+
+            </select>
+            <select name="select_elemento" id="selectElemento">
+
+            </select>
+        </div>
+    </div>
+    <div class="div_operaciones" style="display: none;"></div>
+    <div class="div_salir"><button type="button">SALIR</button></div>
+
+
 </body>
+
 </html>
