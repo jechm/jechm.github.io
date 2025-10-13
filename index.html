@@ -1,67 +1,84 @@
 <!DOCTYPE html>
 <html lang="es">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>PROYECTO: CALCULADORA DE CONJUNTOS</title>
     <script src="logica.js"></script>
-</head>
+  </head>
 
-<body>
+  <body>
     <div>
-        <h1>CALCULADORA DE CONJUNTOS</h1>
+      <h1>CALCULADORA DE CONJUNTOS</h1>
     </div>
 
     <div class="div_Crear_Universo" id="divUniverso">
-        <label for="txtNuevoElementoU">Ingrese un nuevo elemento</label><br>
-        <input type="text" placeholder="NUEVO ELEMENTO AQUI" id="txtNuevoElementoU"><label id="msjCreacionU"></label><br>
-        <button type="button" id="btnCrearU" onclick="añadirElementos('U', 'txtNuevoElementoU')">AGREGAR</button><br>
-        <label id="conjuntoUcr"></label><br>
-        <button type="button" id="btnTerminarConjuntoU"
-            onclick="terminarU()">TERMINAR</button>
+      <label for="txtNuevoElementoU">Ingrese un nuevo elemento</label><br />
+      <input
+        type="text"
+        placeholder="NUEVO ELEMENTO AQUI"
+        id="txtNuevoElementoU"
+      /><label id="msjCreacionU"></label><br />
+      <button
+        type="button"
+        id="btnCrearU"
+        onclick="añadirElementos('U', 'txtNuevoElementoU')"
+      >
+        AGREGAR</button
+      ><br />
+      <label id="conjuntoUcr"></label><br />
+      <button type="button" id="btnTerminarConjuntoU" onclick="terminarU()">
+        TERMINAR
+      </button>
     </div>
 
-    <div class="div_men_principal" id="divMenuPrincipal" style="display: none;">
-        <nav>
-            <button type="button" onclick="cambiarDiv('')">CREAR CONJUNTOS</button>
-            <button type="button" onclick="cambiarDiv('div_creacion','div_modificacion')">MODIFICAR CONJUNTOS</button>
-        </nav>
+    <div class="div_men_principal" id="divMenuPrincipal" style="display: none">
+      <nav>
+        <button type="button" onclick="cambiarDiv('')">CREAR CONJUNTOS</button>
+        <button
+          type="button"
+          onclick="cambiarDiv('div_creacion','div_modificacion')"
+        >
+          MODIFICAR CONJUNTOS
+        </button>
+      </nav>
     </div>
 
-    <div class="div_creacion" id="divCreacion" style="display: none;">
-        <h2>CREACION DE CONJUNTOS</h2>
-        <label for="txtNombreNuevoConjunto">NOMBRE DEL CONJUNTO:</label>
-        <input type="text" id="txtNombreNuevoConjunto" >
-        <button type="button" id="btnGuardarNombre" onclick="creaConjunto()">Crear</button>
-        
-        <label id="msjCreacion"></label>
-        <br>
-        <h3>Selecciona los elementos del conjunto</h3>
-        <select id="" disabled="disabled"></select>
+    <div class="div_creacion" id="divCreacion" style="display: none">
+      <h2>CREACION DE CONJUNTOS</h2>
+      <label for="txtNombreNuevoConjunto">NOMBRE DEL CONJUNTO:</label>
+      <input type="text" id="txtNombreNuevoConjunto" />
+      <button type="button" id="btnGuardarNombre" onclick="creaConjunto()">
+        Crear
+      </button>
+
+      <label id="msjCreacion"></label>
+      <br />
+      <h3>Selecciona los elementos del conjunto</h3>
+      <select id="selElementos" disabled="disabled">
+        <!--Select llenado automaticamente al completarse-->
+      </select>
+      <button
+        type="button"
+        id="agregarElemento"
+        onclick="añadirElementos('txtNombreNuevoConjunto','selElementos')"
+      >
+        AGREGAR
+      </button>
+      <label id="elementosConjuntoNuevo"></label>
 
     </div>
 
-    <div class="div_ver_conjuntos" style="display: none;"></div>
-    <div class="div_modificacion" style="display: none;">
-        <div id="div_añadirElemento">
-            <select id="select_nombreConjunto">
-
-            </select>
-        </div>
-        <div id="div_elimminarElementop" style="display: none;">
-            <select name="select_conjuntos" id="selectConjuntos">
-
-            </select>
-            <select name="select_elemento" id="selectElemento">
-
-            </select>
-        </div>
+    <div class="div_ver_conjuntos" style="display: none"></div>
+    <div class="div_modificacion" style="display: none">
+      <div id="div_añadirElemento">
+        <select id="select_nombreConjunto"></select>
+      </div>
+      <div id="div_elimminarElementop" style="display: none">
+        <select name="select_conjuntos" id="selectConjuntos"></select>
+        <select name="select_elemento" id="selectElemento"></select>
+      </div>
     </div>
-    <div class="div_operaciones" style="display: none;"></div>
-
-
-
-</body>
-
+    <div class="div_operaciones" style="display: none"></div>
+  </body>
 </html>
